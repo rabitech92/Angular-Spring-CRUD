@@ -1,18 +1,18 @@
-package com.backend.model;
+package com.backend.dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@Table
 @Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class User {
+public class UserDto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
