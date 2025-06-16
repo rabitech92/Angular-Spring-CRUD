@@ -2,24 +2,31 @@ package com.backend.mapper;
 
 import com.backend.dto.UserDto;
 import com.backend.model.User;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@Data
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserMapper {
 
     public static User toModel(UserDto userDto){
-        User.builder()
-                .useName(userDto.getUseName())
-                .email(userDto.getEmail())
-                .password(userDto.getPassword())
-                .build();
-        return new User();
+        User user = new User();
+        user.setUserName(userDto.getUserName());
+        user.setEmail(userDto.getEmail());
+        user .setPassword(userDto.getPassword());
+
+        return user;
 
     }
     public static UserDto toDto(User user){
-        UserDto.builder()
-                .useName(user.getUseName())
-                .email(user.getEmail())
-                .password(user.getPassword())
-                .build();
-        return new UserDto();
+        UserDto userDto = new UserDto();
+        userDto.setUserName(user.getUserName());
+        userDto.setEmail(user.getEmail());
+        userDto.setPassword(user.getPassword());
+        return userDto;
     }
 }

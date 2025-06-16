@@ -6,7 +6,8 @@ import com.backend.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api")
+@CrossOrigin("http://localhost:4200/")
 public class UserController {
 
     private final UserService userService ;
@@ -14,7 +15,7 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
-    @PostMapping("/")
+    @PostMapping("/save")
     public UserDto createUser(@RequestBody User user){
         return userService.createUser(user);
     }
