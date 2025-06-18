@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../service/user/user-service';
+import { Router } from '@angular/router';
+import { UserInfo } from '../../model/user/user-info.model';
+
 
 
 @Component({
@@ -9,37 +12,38 @@ import { UserService } from '../../service/user/user-service';
   templateUrl: './user.html',
   styleUrl: './user.css'
 })
-export class User {
+export class User{
 
-  registrationForm: FormGroup;
-  errorMessage: string | null = null;
-  successMessage: string | null = null;
+ userForm : FormGroup;
+  constructor(
+    private fb : FormBuilder,
+    private userService : UserService,
+    private router : Router
 
-  constructor(private fb: FormBuilder, private userService: UserService) {
-    this.registrationForm = this.fb.group({
-      userName: ['', [Validators.required, Validators.minLength(3)]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+  ){
+    this.userForm = this.fb.group({
+      userName : ['',Validators.required],
+      email : ['', [Validators.required,Validators.email]],
+      password : ['',[Validators.required,Validators.minLength(8)]]
+
     });
+
   }
 
+  onSubmit():void{
+    if (this.userForm.valid) {
+      const user : UserInfo = this.userForm.value;
+      this.userService.createUser(user).subscribe({
+        next: () => {
+          this.router.navigate(['/success']);
+        },
+        error:(err) =>{
+          console.error('Error creating user:',err)
+        }
+      })
 
-onSubmit(): void {
-  if (this.registrationForm.valid) {
-    const user: User = this.registrationForm.value as User; // Type assertion
-    this.userService.save(user).subscribe({
-      next: (response) => {
-        this.successMessage = 'Registration successful!';
-        this.errorMessage = null;
-        this.registrationForm.reset();
-      },
-      error: (error) => {
-        this.errorMessage = 'Registration failed. Please try again.'; // Fixed message
-        this.successMessage = null;
-        console.error('Registration error:', error);
-      }
-    }); // Added missing parenthesis
+    }
   }
-}
+
   }
 
