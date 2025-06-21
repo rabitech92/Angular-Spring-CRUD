@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
+import { UserInfo } from '../../model/user/user-info.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../service/user/user-service';
 import { Router } from '@angular/router';
-import { UserInfo } from '../../model/user/user-info.model';
-
-
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-user-component',
   imports: [],
-  templateUrl: './user.html',
-  styleUrl: './user.css'
+  templateUrl: './user-component.html',
+  styleUrl: './user-component.css'
 })
-export class User{
+export class UserComponent {
 
- userForm : FormGroup;
+  userForm : FormGroup;
   constructor(
     private fb : FormBuilder,
     private userService : UserService,
@@ -45,5 +43,4 @@ export class User{
     }
   }
 
-  }
-
+}
