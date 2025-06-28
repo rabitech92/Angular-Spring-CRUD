@@ -3,8 +3,8 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { UserCreate } from './user-create/user-create';
 import { UserList } from './component/user-list/user-list';
+import { UserCreate } from './component/user-create/user-create';
 
 @NgModule({
   declarations: [
