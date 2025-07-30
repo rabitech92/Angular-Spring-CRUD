@@ -1,0 +1,36 @@
+<!-- 
+<h3>{{name}}</h3>
+<ul>
+  <li *ngFor="let data of classname">{{data}}</li>
+</ul>
+
+<h4>{{getName()}}</h4>
+<img src="{{nature_image}}" alt="">
+
+<h5>{{emp_info.name}}</h5>
+<h5>{{emp_info.address}}</h5>
+<h5>{{emp_info.age}}</h5>
+<h5>{{emp_info.mobile}}</h5>
+<h5>{{emp_info.nid}}</h5>
+
+<h4>Employee Name :{{emp_salary.name}}</h4>
+<h4>Employee Jo Id: {{emp_salary.id}}</h4>
+<h4>Employee Gross Salary: {{emp_salary.salary}}</h4>
+<h4>Employee Gross Salary: {{emp_salary.bonus}}</h4>
+<h4>Employee Total Salary And bonus :{{emp_salary.name + emp_salary.bonus}}</h4>
+
+<h2>String interpolation</h2>
+<h2>property Binding</h2>
+<img [src]="nature_image" alt="no images">
+<h1 [textContent]="name"></h1>
+<h1>Rabiul</h1> -->
+
+<div class="container">
+  <input (change)="loadlender()" #clander type="date">
+  <label for="">value : </label>
+  <input #input type="text">
+</div>
+
+<app-patient></app-patient>
+
+<button (click)="add()"> add</button>
