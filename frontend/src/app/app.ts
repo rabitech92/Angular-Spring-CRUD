@@ -1,6 +1,7 @@
 import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { __read } from 'tslib';
 import { Patient } from './patient/patient';
+import { Doctor } from './doctor/doctor';
 
 @Component({
   selector: 'app-root',
@@ -41,6 +42,7 @@ export class App {
   @ViewChild('clander',{read:ElementRef,static:true}) clander! : ElementRef;
   @ViewChild('input',{read:ElementRef,static:true}) input! : ElementRef;
   @ViewChild(Patient) patient !: Patient;
+  @ViewChild(Doctor) doctor! : Doctor;
 
   ngOnInit():void{
     console.log(this.clander);
@@ -50,6 +52,7 @@ export class App {
   ngAfterViewInit():void{
 
 console.log(this.patient);
+console.log(this.doctor);
 
     
   }
@@ -62,5 +65,9 @@ console.log(this.patient);
 
   add(){
     this.patient.increament();
+  }
+
+  msg(){
+    this.doctor.increase();
   }
 }
