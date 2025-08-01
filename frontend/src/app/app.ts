@@ -2,6 +2,8 @@ import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { __read } from 'tslib';
 import { Patient } from './patient/patient';
 import { Doctor } from './doctor/doctor';
+import { Mysoft } from './mysoft/mysoft';
+import { Test } from './test/test';
 
 @Component({
   selector: 'app-root',
@@ -43,6 +45,8 @@ export class App {
   @ViewChild('input',{read:ElementRef,static:true}) input! : ElementRef;
   @ViewChild(Patient) patient !: Patient;
   @ViewChild(Doctor) doctor! : Doctor;
+  @ViewChild(Mysoft) mysoft! : Mysoft;
+  @ViewChild(Test) test! : Test;
 
   ngOnInit():void{
     console.log(this.clander);
@@ -53,6 +57,8 @@ export class App {
 
 console.log(this.patient);
 console.log(this.doctor);
+console.log(this.doctor);
+console.log(this.mysoft);
 
     
   }
@@ -69,5 +75,11 @@ console.log(this.doctor);
 
   msg(){
     this.doctor.increase();
+  }
+  boom(){
+    this.mysoft.tic();
+  }
+  molom(){
+    this.test.add();
   }
 }
