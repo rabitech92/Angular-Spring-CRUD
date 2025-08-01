@@ -48,6 +48,8 @@ export class App {
   @ViewChild(Mysoft) mysoft! : Mysoft;
   @ViewChild(Test) test! : Test;
 
+  isTest : boolean=false;
+
   ngOnInit():void{
     console.log(this.clander);
     
@@ -59,6 +61,7 @@ console.log(this.patient);
 console.log(this.doctor);
 console.log(this.doctor);
 console.log(this.mysoft);
+console.log(this.test);
 
     
   }
@@ -81,5 +84,8 @@ console.log(this.mysoft);
   }
   molom(){
     this.test.add();
+  }
+  toggle(){
+    this.isTest = !this.isTest;
   }
 }
