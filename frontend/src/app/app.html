@@ -44,3 +44,14 @@
 
 <app-test *ngIf="isTest"></app-test>
 <button (click)="molom()">test</button>
+
+<app-sinha *ngIf="isTic"></app-sinha>
+<button (click)="toggle()"> sinha</button>
+<div>
+  <h1 ></h1>
+</div>
+
+<app-void-button *ngIf="isTic" [text]="'Add New'" (OnClick)="add()"></app-void-button>
+<button (click)="toggle2()">Void</button>
+
+<app-rabiul [rabiul]="'Click rabiul'" (parent)="add()"></app-rabiul>

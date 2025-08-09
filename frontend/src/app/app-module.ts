@@ -7,6 +7,9 @@ import { Patient } from './patient/patient';
 import { Doctor } from './doctor/doctor';
 import { Mysoft } from './mysoft/mysoft';
 import { Test } from './test/test';
+import { Sinha } from './sinha/sinha';
+import { VoidButton } from './void-button/void-button';
+import { Rabiul } from './rabiul/rabiul';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { Test } from './test/test';
     Patient,
     Doctor,
     Mysoft,
-    Test
+    Test,
+    Sinha,
+    VoidButton,
+    Rabiul
   ],
   imports: [
     BrowserModule,
