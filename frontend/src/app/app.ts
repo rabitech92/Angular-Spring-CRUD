@@ -102,4 +102,8 @@ export class App {
   toggle2() {
     this.isTic = !this.isTic;
   }
+  hello(){
+    console.log("Hello Rabiul islam");
+    
+  }
 }
