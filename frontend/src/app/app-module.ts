@@ -10,6 +10,8 @@ import { Test } from './test/test';
 import { Sinha } from './sinha/sinha';
 import { VoidButton } from './void-button/void-button';
 import { Rabiul } from './rabiul/rabiul';
+import { Child } from './child/child';
+import { Parent } from './parent/parent';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { Rabiul } from './rabiul/rabiul';
     Test,
     Sinha,
     VoidButton,
-    Rabiul
+    Rabiul,
+    Child,
+    Parent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,6 @@ import { Rabiul } from './rabiul/rabiul';
   providers: [
     provideBrowserGlobalErrorListeners()
   ],
-  bootstrap: [App]
+  bootstrap: [Parent]
 })
 export class AppModule { }

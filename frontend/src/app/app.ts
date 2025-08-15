@@ -1,9 +1,10 @@
-import { Component, ElementRef, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, signal, ViewChild } from '@angular/core';
 import { __read } from 'tslib';
 import { Patient } from './patient/patient';
 import { Doctor } from './doctor/doctor';
 import { Mysoft } from './mysoft/mysoft';
 import { Test } from './test/test';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { Test } from './test/test';
   standalone: false,
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit{
   // protected readonly title = signal('frontend');
   // classname =['six','seven','eight','nine']
 
@@ -54,56 +55,64 @@ export class App {
   btn: any;
   Add: any;
 
+  postList : any[] = [];
+
   
-  constructor() {
-    console.log("Parnt are called");
+  constructor(private http : HttpClient) {
+  
 
   }
 
   ngOnInit(): void {
     console.log(this.clander);
+    this.getAllPost()
 
   }
 
-  ngAfterViewInit(): void {
+  // ngAfterViewInit(): void {
 
-    console.log(this.patient);
-    console.log(this.doctor);
-    console.log(this.doctor);
-    console.log(this.mysoft);
-    console.log(this.test);
+  //   console.log(this.patient);
+  //   console.log(this.doctor);
+  //   console.log(this.doctor);
+  //   console.log(this.mysoft);
+  //   console.log(this.test);
 
 
-  }
+  // }
 
-  loadlender() {
-    console.log(this.clander.nativeElement.value);
-    this.input.nativeElement.value = this.clander.nativeElement.value;
+  // loadlender() {
+  //   console.log(this.clander.nativeElement.value);
+  //   this.input.nativeElement.value = this.clander.nativeElement.value;
 
-  }
+  // }
 
-  add() {
-    this.patient.increament();
-  }
+  // add() {
+  //   this.patient.increament();
+  // }
 
-  msg() {
-    this.doctor.increase();
-  }
-  boom() {
-    this.mysoft.tic();
-  }
-  molom() {
-    this.test.add();
-  }
-  toggle() {
-    this.isTest = !this.isTest;
-  }
+  // msg() {
+  //   this.doctor.increase();
+  // }
+  // boom() {
+  //   this.mysoft.tic();
+  // }
+  // molom() {
+  //   this.test.add();
+  // }
+  // toggle() {
+  //   this.isTest = !this.isTest;
+  // }
 
-  toggle2() {
-    this.isTic = !this.isTic;
-  }
-  hello(){
-    console.log("Hello Rabiul islam");
+  // toggle2() {
+  //   this.isTic = !this.isTic;
+  // }
+  // hello(){
+  //   console.log("Hello Rabiul islam");
     
+  // }
+  getAllPost(){
+    this.http.get(`https://jsonplaceholder.typicode.com/posts`).subscribe((res:any) =>
+    this.postList=res);
   }
+  
 }

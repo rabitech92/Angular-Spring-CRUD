@@ -24,7 +24,7 @@
 <img [src]="nature_image" alt="no images">
 <h1 [textContent]="name"></h1>
 <h1>Rabiul</h1> -->
-
+<!-- 
 <div class="container">
   <input (change)="loadlender()" #clander type="date">
   <label for="">value : </label>
@@ -54,4 +54,29 @@
 <app-void-button *ngIf="isTic" [text]="'Add New'" (OnClick)="add()"></app-void-button>
 <button (click)="toggle2()">Void</button>
 
-<app-rabiul [rabiul]="'Click rabiul'" (parent)="hello()"></app-rabiul>
+<app-rabiul [rabiul]="'Click rabiul'" (parent)="hello()"></app-rabiul> -->
+<!-- 
+<div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>IDUSER ID</th>
+          <th>ID</th>
+          <th>TITLE</th>
+          <th>BODY</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of postList; track $index){
+          <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.userId}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.body}}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div> -->
