@@ -7,13 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './parent.css'
 })
 export class Parent {
-childData = '';
 
-textChange(msg:string):void{
-  // console.log('Hello Text child to parent data from child output ');
-  this.childData = msg;
-  
-}
+  receiveFromChild = '';
+
+  dataAccept(newData:string){
+    this.receiveFromChild = newData;
+  }
+
+
+ 
+
 
 
 }

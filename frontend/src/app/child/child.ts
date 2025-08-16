@@ -8,11 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class Child {
 
-  @Input() inputEvent: string = '';
-  @Output() outpuEvent = new EventEmitter<string>();
+  @Input() reciveData :string = '';
+  @Output() sendData  = new EventEmitter<string>();
 
-  changeData(){
-    this.outpuEvent.emit('Hello text form child to parent output data')
+  changeChild(){
+    this.sendData.emit('Hello Text from child to parent');
   }
+
+
 
 }

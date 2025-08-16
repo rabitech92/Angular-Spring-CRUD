@@ -1,8 +1,4 @@
 <p>parent works!</p>
-<app-child [inputEvent]= "'Hello Text from parent to child'"
-(outpuEvent)="textChange($event)">
-
-</app-child>
-
-<h1>{{childData}}</h1>
-
+<app-child [reciveData]="'Hello Text from parent to child'"
+(sendData)="dataAccept($event)"></app-child>
+<h1>{{receiveFromChild}}</h1>
