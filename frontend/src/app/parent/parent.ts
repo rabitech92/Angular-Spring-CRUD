@@ -14,6 +14,8 @@ export class Parent {
     this.receiveFromChild = newData;
   }
 
+  header = 'Student Details'
+
 
 
 }

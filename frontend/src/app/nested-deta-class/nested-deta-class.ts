@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './nested-deta-class.css'
 })
 export class NestedDetaClass {
-
+firstName = 'Rabiul islam';
+lastName = 'Robin';
+age = 33;
+gender = 'Male';
 }
