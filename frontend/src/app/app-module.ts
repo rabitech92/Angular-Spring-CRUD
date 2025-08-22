@@ -16,6 +16,7 @@ import { DataBinding } from './data-binding/data-binding';
 import { FormsModule } from '@angular/forms';
 import { NestedDetaClass } from './nested-deta-class/nested-deta-class';
 import { StructuralDirective } from './structural-directive/structural-directive';
+import { Pipedirective } from './pipedirective/pipedirective';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { StructuralDirective } from './structural-directive/structural-directive
     Parent,
     DataBinding,
     NestedDetaClass,
-    StructuralDirective
+    StructuralDirective,
+    Pipedirective
   ],
   imports: [
     BrowserModule,

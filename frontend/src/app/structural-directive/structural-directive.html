@@ -12,3 +12,7 @@
     <div *ngSwitchCase="'lichu'">like your {{fruts}}</div>
     <div *ngSwitchDefault>like your {{fruts}}</div>
 </div>
+<button (click)="toggoleSwitch()">Switch </button>
+<div *ngIf="switchClass;then switchOn else switchOff"></div>
+<ng-template #switchOn>Bulb is On</ng-template>
+<ng-template #switchOff>Bulb is Off</ng-template>

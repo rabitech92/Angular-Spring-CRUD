@@ -13,4 +13,10 @@ export class StructuralDirective {
 
   fruts = "Banana"
 
+  switchClass = true;
+
+  toggoleSwitch(){
+    this.switchClass = !this.switchClass;
+  }
+
 }
