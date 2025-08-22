@@ -12,6 +12,9 @@ import { VoidButton } from './void-button/void-button';
 import { Rabiul } from './rabiul/rabiul';
 import { Child } from './child/child';
 import { Parent } from './parent/parent';
+import { DataBinding } from './data-binding/data-binding';
+import { FormsModule } from '@angular/forms';
+import { NestedDetaClass } from './nested-deta-class/nested-deta-class';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,15 @@ import { Parent } from './parent/parent';
     VoidButton,
     Rabiul,
     Child,
-    Parent
+    Parent,
+    DataBinding,
+    NestedDetaClass
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

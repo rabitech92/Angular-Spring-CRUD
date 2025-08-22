@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Parent } from './parent';
+import { DataBinding } from './data-binding';
 
-describe('Parent', () => {
-  let component: Parent;
-  let fixture: ComponentFixture<Parent>;
+describe('DataBinding', () => {
+  let component: DataBinding;
+  let fixture: ComponentFixture<DataBinding>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Parent]
+      declarations: [DataBinding]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Parent);
+    fixture = TestBed.createComponent(DataBinding);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

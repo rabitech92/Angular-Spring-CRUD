@@ -1,0 +1,22 @@
+<p>data-binding works!</p>
+
+<p>string interpolation</p>
+<h2>{{hello}}</h2>
+<p>Binding propertice</p>
+<input type="text" [id]="myId" value="Rabiul">
+<input type="text" bind-id="myId" value="sinha">
+<input type="text" [id]="myId" value="Uzayer">
+&nbsp;
+<p>Multiple propertice bind</p>
+<button [ngStyle]="mltipleCss()">Click</button>
+
+<p>Event binding</p>
+<p>{{count}}</p>
+<button (click)="countChange()">Click Event binding</button>
+
+<h1>Two way data binding</h1>
+<p>{{name}}</p>
+<input type="text" [(ngModel)]="name">
+
+
+
