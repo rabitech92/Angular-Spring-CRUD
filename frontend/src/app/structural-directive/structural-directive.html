@@ -1,0 +1,14 @@
+<p>structural-directive works!</p>
+<h1>{{channel}}</h1>
+<h2>structural-directive</h2>
+<div *ngFor="let name of names; index as i">
+   <h3>{{i}}{{name}}</h3>
+</div>
+<h1>ng switch case</h1>
+<div [ngSwitch]="fruts">
+    <div *ngSwitchCase="'mango'">like your {{fruts}}</div>
+    <div *ngSwitchCase="'banana'">like your {{fruts}}</div>
+    <div *ngSwitchCase="'apple'">like your {{fruts}}</div>
+    <div *ngSwitchCase="'lichu'">like your {{fruts}}</div>
+    <div *ngSwitchDefault>like your {{fruts}}</div>
+</div>
