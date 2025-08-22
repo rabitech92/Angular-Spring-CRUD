@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class Pipedirective {
 
-  pipeClass = "Rabiul Islam is a softwere Engenier";
+  pipeClass = "Rabiul Islam is works with pipe";
   dob : string = "23/08/2025";
+
+  amount = 10.60;
 
 }
