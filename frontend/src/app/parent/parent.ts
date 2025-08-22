@@ -16,6 +16,8 @@ export class Parent {
 
   header = 'Student Details'
 
+  parentName = 'Parent data are show';
+
 
 
 }
