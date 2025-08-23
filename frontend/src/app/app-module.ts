@@ -19,6 +19,7 @@ import { StructuralDirective } from './structural-directive/structural-directive
 import { Pipedirective } from './pipedirective/pipedirective';
 import { ParentToChild } from './parent-to-child/parent-to-child';
 import { LifeCycleHooks } from './life-cycle-hooks/life-cycle-hooks';
+import { StudentList } from './student-list/student-list';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LifeCycleHooks } from './life-cycle-hooks/life-cycle-hooks';
     StructuralDirective,
     Pipedirective,
     ParentToChild,
-    LifeCycleHooks
+    LifeCycleHooks,
+    StudentList
   ],
   imports: [
     BrowserModule,
