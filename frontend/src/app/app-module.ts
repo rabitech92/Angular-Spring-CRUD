@@ -1,4 +1,4 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { Component, NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
@@ -20,6 +20,14 @@ import { Pipedirective } from './pipedirective/pipedirective';
 import { ParentToChild } from './parent-to-child/parent-to-child';
 import { LifeCycleHooks } from './life-cycle-hooks/life-cycle-hooks';
 import { StudentList } from './student-list/student-list';
+import { Route, RouterModule, Routes } from '@angular/router';
+import { HomeDetails } from './home-details/home-details';
+
+const appRoutes : Routes =  [
+  { path: 'home', component: HomeDetails },
+  { path: 'student', component: StudentList },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
@@ -39,12 +47,14 @@ import { StudentList } from './student-list/student-list';
     Pipedirective,
     ParentToChild,
     LifeCycleHooks,
-    StudentList
+    StudentList,
+    HomeDetails
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes),
     
   ],
   providers: [
