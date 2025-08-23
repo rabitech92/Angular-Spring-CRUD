@@ -18,6 +18,7 @@ import { NestedDetaClass } from './nested-deta-class/nested-deta-class';
 import { StructuralDirective } from './structural-directive/structural-directive';
 import { Pipedirective } from './pipedirective/pipedirective';
 import { ParentToChild } from './parent-to-child/parent-to-child';
+import { LifeCycleHooks } from './life-cycle-hooks/life-cycle-hooks';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ParentToChild } from './parent-to-child/parent-to-child';
     NestedDetaClass,
     StructuralDirective,
     Pipedirective,
-    ParentToChild
+    ParentToChild,
+    LifeCycleHooks
   ],
   imports: [
     BrowserModule,

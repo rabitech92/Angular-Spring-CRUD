@@ -18,6 +18,8 @@ export class Parent {
 
   parentName = 'Parent data are show';
 
+  userTest : string= "Hello rabiul";
+
 
 
 }

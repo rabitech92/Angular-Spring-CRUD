@@ -10,6 +10,12 @@
 <app-pipedirective></app-pipedirective>
 
 <h1>parent to child</h1>
+<p>======================</p>
 <app-parent-to-child [childData]= "parentName"></app-parent-to-child>
+
+<h1>Life Cycle Hooks</h1>
+
+<app-life-cycle-hooks [simpleName]='userTest'></app-life-cycle-hooks>
+<input type="text" [(ngModel)]='userTest'>
 
 
